@@ -22,7 +22,8 @@ body{
 
     position: relative;
     width: 350px;
-    height: 450px;
+    height: 480px;
+    transform: scale(110%);
 }
 
 .paper{
@@ -81,7 +82,7 @@ button{
     border: none;
     background-color: transparent;
     cursor: pointer ;
-    margin: 10px;
+    margin: 30px;
 }
 
 button:focus{
