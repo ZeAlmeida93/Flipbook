@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Page Viewer</title>
+    <style>
+        .page {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            width: 80%;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script>
+        const pdfUrl = '/Flipbook/flip book/teste script pdf/CIAMS25_40PAG_COMPLETO_240523.pdf'; // Replace with your PDF URL
+
+// ASYNCHRONOUS FUNCTION THAT GENERATE THE NUMBER OF PAGES BY READING PDF
+
+        async function loadPdfAndGeneratePages(url) {
+            const pdfjsLib = window['pdfjs-dist/build/pdf'];
+            pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
+
+            const loadingTask = pdfjsLib.getDocument(url);
+            const pdf = await loadingTask.promise;
+            const numPages = pdf.numPages;
+
+            const container = document.getElementById('container');
+
+            for (let i = 1; i <= numPages; i++) {
+                const pageDiv = document.createElement('div');
+                pageDiv.className = 'page';
+                pageDiv.id = `page-${i}`;
+                pageDiv.textContent = `Page ${i}`;
+
+                container.appendChild(pageDiv);
+            }
+        }
+
+     
+        loadPdfAndGeneratePages(pdfUrl);
+    </script>
+</body>
+</html>
