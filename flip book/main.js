@@ -15,13 +15,13 @@ nextBtn.addEventListener("click", goNextPage);//quando clicamos no prev chama a 
 
 //Bussiness logic
 let currentLocation = 1; //pagina que estamos
-let numOfPapers = 3 ; //maximo de paginas 
+let numOfPapers = 40 ; //maximo de paginas 
 let maxLocation = numOfPapers + 1 ; //localizacao maxima = numero de paginas + 1
 
 function openBook(){ //funcao abrir o livro
     book.style.transform = "translateX(50%)";
-    prevBtn.style.transform = "translateX(-380px)";
-    nextBtn.style.transform = "translateX(380px)";
+    prevBtn.style.transform = "translateX(-450px)"; /* Alterei aqui as medidas para elas não ficarem sobrepostas - temos que ver como fica em mobiel */
+    nextBtn.style.transform = "translateX(450px)";
 
 }
 
