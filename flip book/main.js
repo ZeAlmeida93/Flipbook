@@ -20,8 +20,8 @@ let maxLocation = numOfPapers + 1 ; //localizacao maxima = numero de paginas + 1
 
 function openBook(){ //funcao abrir o livro
     book.style.transform = "translateX(50%)";
-    prevBtn.style.transform = "translateX(-180px)";
-    nextBtn.style.transform = "translateX(180px)";
+    prevBtn.style.transform = "translateX(-380px)";
+    nextBtn.style.transform = "translateX(380px)";
 
 }
 
