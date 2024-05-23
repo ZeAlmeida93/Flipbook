@@ -13,7 +13,7 @@ body{
     font-family: sans-serif;
     background-image: url();
     background-color: powderblue;
-
+background-image: url();
     background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o fundo */
     background-position: center; /* Centraliza a imagem */
 }
